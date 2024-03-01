@@ -78,7 +78,7 @@ export default class Http {
                 method: 'POST',
                 query,
                 body,
-                server: false
+                server: false,
             })
         }
 

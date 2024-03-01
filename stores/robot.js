@@ -1,7 +1,15 @@
 export const useRobotStore = defineStore('robot', () => {
-    const count = ref(0)
+    const botInfos = ref()
+    const botStates = ref()
+
+    function initBotInfos(infos) {
+        botInfos.value = infos
+        botStates.value = infos.records.map(v => v.state.key)
+    }
 
     return {
-        count
+        botInfos,
+        botStates,
+        initBotInfos
     }
 })
